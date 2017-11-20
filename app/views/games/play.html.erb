@@ -1,10 +1,13 @@
-<p>Your letters grid :</p>
-<p><%= @grid.join(" - ") %></p>
+<div id="play">
+  <h2>Your letters grid :</h2>
+  <h2><%= @grid.join(" - ") %></h2>
 
-<form action="/score">
-  <label for="guess">Your guess</label>
-  <input type="text" id="guess" name="attempt">
-  <input type="hidden" name="grid" value="<%= @grid %>">
-  <input type="hidden" name="start_time" value="<%= @start_time %>">
-  <input type="submit" name="Play!">
-</form>
+  <form action="/score" class="">
+    <div class="form-group">
+      <input type="text" id="guess" name="attempt" placeholder="Your answer" class="form-control">
+      <input type="hidden" name="grid" value="<%= @grid %>">
+      <input type="hidden" name="start_time" value="<%= @start_time %>">
+      <button type="submit" name="Play!" class="btn btn-primary form-control">Play!</button>
+    </div>
+  </form>
+</div>

@@ -1,10 +1,15 @@
-<p>Grid : <%= @grid.join(" - ") %></p>
-<p>Your word : <%= @attempt %></p>
-<p>Time taken to answer : <%= @score[:time] %></p>
-<p>Your score : <%= @score[:score] %></p>
-<p><%= @score[:message] %></p>
-<%= link_to 'New game', 'play' %>
+<div id="score">
+  <p>Grid : <%= @grid.join(" - ") %></p>
+  <p>Your word : <%= @attempt %></p>
+  <p>Time taken to answer : <%= @score[:time] %></p>
+  <div id="results">
+    <h1>Your score : <%= @score[:score] %></h1>
+    <h2><%= @score[:message] %></h2>
+  </div>
+  <%= link_to 'New game', 'play', class: "btn btn-primary" %>
 
-
-<p>Total number of games you have played : <%= @number_of_games %></p>
-<p>Your average response time : <%= @average_response_time %></p>
+  <div id="stats">
+    <p>Total number of games you have played : <%= @number_of_games %></p>
+    <p>Your average response time : <%= @average_response_time %></p>
+  </div>
+</div>

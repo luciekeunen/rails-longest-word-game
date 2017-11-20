@@ -1,0 +1,22 @@
+#score {
+  width: 80%;
+  padding: 180px;
+  height : 100vh;
+  margin: 0 auto;
+  background-color: $light-gray;
+  text-align: center;
+
+  .btn {
+    margin: 20px;
+  }
+
+  #results {
+    padding-top: 40px;
+  }
+
+  #stats {
+    margin-top: 150px;
+    font-size: 14px;
+    background-color: white;
+  }
+}

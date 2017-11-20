@@ -1,0 +1,14 @@
+// Specific CSS for your home-page
+.home {
+  text-align: center;
+  height : 100vh;
+  padding: 250px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.pexels.com/photos/278887/pexels-photo-278887.jpeg");
+  background-size: cover;
+
+  h1 {
+    color: white;
+    padding: 20px;
+  }
+
+}
