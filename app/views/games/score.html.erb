@@ -1,0 +1,6 @@
+<p>Grid : <%= @grid.join(" - ") %></p>
+<p>Your word : <%= @attempt %></p>
+<p>Time taken to answer : <%= @score[:time] %></p>
+<p>Your score : <%= @score[:score] %></p>
+<p><%= @score[:message] %></p>
+<%= link_to 'New game', 'play' %>
