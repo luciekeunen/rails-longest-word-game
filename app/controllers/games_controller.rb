@@ -2,6 +2,11 @@ require 'open-uri'
 require 'json'
 
 class GamesController < ApplicationController
+  def home
+    session[:number_of_games] = 0
+    session[:average_response_time] = 0
+  end
+
   def play
     @grid = generate_grid(8)
     @start_time = Time.now
@@ -14,6 +19,10 @@ class GamesController < ApplicationController
     @grid = eval(params['grid'])
     @score = run_game(@attempt, @grid, @start_time, @end_time)
     @grid = eval(params['grid'])
+    session[:average_response_time] = (session[:average_response_time] * session[:number_of_games] + @score[:time]) / (session[:number_of_games] + 1)
+    session[:number_of_games] += 1
+    @number_of_games = session[:number_of_games]
+    @average_response_time = session[:average_response_time]
   end
 
   def generate_grid(grid_size)
